@@ -15,7 +15,7 @@ include_once('../connection.php');
 $order_id = $_GET['order_id'];
 
 // Prepare the SQL statement
-$stmt = $mysqli->prepare("SELECT *,  taikhoan.name AS taikhoan_name, sanpham.name AS sanpham_name
+$stmt = $conn->prepare("SELECT *,  taikhoan.name AS taikhoan_name, sanpham.name AS sanpham_name
 FROM orders 
 JOIN order_items ON orders.id = order_items.order_id 
 JOIN taikhoan ON taikhoan.username = orders.username 
@@ -23,7 +23,8 @@ JOIN sanpham ON order_items.product_id = sanpham.product_id
 WHERE orders.id = ?");
 
 if ($stmt === false) {
-    die("Failed to prepare statement: " . $mysqli->error);
+    $conn_error = is_object($conn) ? $conn->error : 'Invalid database connection';
+    die("Failed to prepare statement: " . $conn_error);
 }
 
 // Bind the order_id parameter
