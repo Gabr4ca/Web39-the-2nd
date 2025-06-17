@@ -6,10 +6,10 @@ if (!isset($_SESSION['username'])) {
     header("Location: Sign-in.php");
     exit();
 }
-include_once ('layout/head.php');
-include_once ('../connection.php');
+include_once('layout/head.php');
+include_once('../connection.php');
 
-include_once ('search.php');
+include_once('search.php');
 
 // Determine which page to display
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
@@ -48,7 +48,7 @@ if ($ketqua) {
     echo "Error executing query: " . mysqli_error($mysqli);
 }
 
-include_once ('advanced.php');
+include_once('advanced.php');
 
 
 
@@ -222,7 +222,7 @@ include_once ('advanced.php');
         </div>
 
     </div>
-    <?php include_once ('layout/footer.php'); ?>
+    <?php include_once('layout/footer.php'); ?>
 </body>
 
 </html>

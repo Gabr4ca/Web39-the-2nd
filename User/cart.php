@@ -8,8 +8,8 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-include_once ('layout/head.php');
-include_once ('../connection.php');
+include_once('layout/head.php');
+include_once('../connection.php');
 
 if (isset($_POST['product_id'])) {
     // Get the product id from the form
@@ -275,7 +275,7 @@ if (isset($_POST['increase'])) {
         </div>
 
 
-        <?php include_once ('layout/footer.php'); ?>
+        <?php include_once('layout/footer.php'); ?>
     </div>
 </body>
 

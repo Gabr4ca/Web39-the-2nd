@@ -9,10 +9,10 @@ if (!isset($_SESSION['username'])) {
     header("Location: ../UserSign-in.php");
     exit();
 }
-include_once ('../User/layout/head.php');
-include_once ('../connection.php');
+include_once('../User/layout/head.php');
+include_once('../connection.php');
 
-include_once ('../User/search.php');
+include_once('../User/search.php');
 
 // Determine which page to display
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
@@ -51,7 +51,7 @@ if ($ketqua) {
     echo "Error executing query: " . mysqli_error($mysqli);
 }
 
-include_once ('../User/advanced.php');
+include_once('../User/advanced.php');
 
 
 

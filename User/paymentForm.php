@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once ('../connection.php');
+include_once('../connection.php');
 
 $username = $_SESSION['username'];
 if (!isset($_SESSION['username'])) {
@@ -43,7 +43,7 @@ while ($row = $result1->fetch_assoc()) {
 <html lang="en">
 
 <head>
-    <?php include_once ('layout/head.php'); ?>
+    <?php include_once('layout/head.php'); ?>
     <link rel="stylesheet" href="./main_detailed_page.php">
     <link rel="stylesheet" href="admin.php">
     <link rel="stylesheet" href="usercss.php">
@@ -261,7 +261,7 @@ while ($row = $result1->fetch_assoc()) {
         </div>
     </div>
 
-    <?php include_once ('layout/footer.php'); ?>
+    <?php include_once('layout/footer.php'); ?>
     </div>
     <!-- <script src="main.js"></script> -->
 </body>

@@ -4,8 +4,8 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
 // Include the database connection file
-include_once ("../connection.php");
-include_once ("../User/layout/head.php");
+include_once("../connection.php");
+include_once("../User/layout/head.php");
 
 // Validate session on each page
 if (!isset($_SESSION['username'])) {

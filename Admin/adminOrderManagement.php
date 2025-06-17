@@ -6,8 +6,8 @@ if (!isset($_SESSION['username'])) {
     header("Location: ../User/Sign-in.php");
     exit();
 }
-include_once ('../User/layout/head.php');
-include_once ('../connection.php');
+include_once('../User/layout/head.php');
+include_once('../connection.php');
 
 $sql = "SELECT * FROM orders JOIN order_items ON orders.id = order_items.order_id GROUP BY order_items.order_id ";
 // Execute the query
@@ -166,7 +166,8 @@ if ($order_id !== null && $status !== null) {
                                                     <option value="cancelled" <?php if ($order['status'] == 'cancelled')
                                                         echo 'selected'; ?>>Đã hủy</option>
                                                 </select>
-                                                <input type="hidden" name="order_id" value="<?php echo $order['order_id']; ?>">
+                                                <input type="hidden" name="order_id"
+                                                    value="<?php echo $order['order_id']; ?>">
                                                 <input type="submit" value="Update">
                                             </form>
                                         </td>

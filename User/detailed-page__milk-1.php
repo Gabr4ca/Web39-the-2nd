@@ -1,8 +1,8 @@
 <?php
 session_start();
 // Include the database connection file
-include_once ("../connection.php");
-include_once ("layout/head.php");
+include_once("../connection.php");
+include_once("layout/head.php");
 
 // Validate session on each page
 if (!isset($_SESSION['username'])) {
@@ -76,7 +76,7 @@ if (isset($_GET['product_id'])) {
 <html lang="en">
 
 <head>
-    <?php include_once ('layout/head.php'); ?>
+    <?php include_once('layout/head.php'); ?>
     <link rel="stylesheet" href="main_detailed_page.php">
     <link rel="stylesheet" href="admin.php">
     <link rel="stylesheet" href="usercss.php">
@@ -155,7 +155,8 @@ if (isset($_GET['product_id'])) {
                             </div>
 
                             <div class="order__item-price">
-                                <label>Giá: </label><b><?php echo number_format($productInfo['price'], 0, ',', '.') . "đ"?></b>
+                                <label>Giá:
+                                </label><b><?php echo number_format($productInfo['price'], 0, ',', '.') . "đ" ?></b>
                             </div>
 
                             <div class="order__number-products">
@@ -197,7 +198,7 @@ if (isset($_GET['product_id'])) {
                 </div>
             </div>
         </div>
-        <?php include_once ('layout/footer.php'); ?>
+        <?php include_once('layout/footer.php'); ?>
     </div>
 </body>
 

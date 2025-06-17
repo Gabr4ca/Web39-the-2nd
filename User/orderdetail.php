@@ -8,8 +8,8 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-include_once ('layout/head.php');
-include_once ('../connection.php');
+include_once('layout/head.php');
+include_once('../connection.php');
 
 // Check if order_id is set
 if (!isset($_GET['order_id'])) {
@@ -224,7 +224,7 @@ $orders = $result->fetch_all(MYSQLI_ASSOC);
         </div>
 
 
-        <?php include_once ('layout/footer.php'); ?>
+        <?php include_once('layout/footer.php'); ?>
     </div>
 </body>
 

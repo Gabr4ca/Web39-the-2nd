@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
-include_once ('../connection.php');
+include_once('../connection.php');
 
 $name = $_SESSION['name'];
 $username = $_SESSION['username'];
@@ -126,7 +126,7 @@ $orderStatusTerms = [
 <html lang="en">
 
 <head>
-    <?php include_once ('layout/head.php'); ?>
+    <?php include_once('layout/head.php'); ?>
     <link rel="stylesheet" href="admin.php">
     <link rel="stylesheet" href="usercss.php">
     <link rel="stylesheet" href="ordercss.php">
@@ -170,13 +170,14 @@ $orderStatusTerms = [
                         </a>
 
                         <form name="search" action="user.php" method="GET" class="header__search">
-                        <input class="header__search-input" type="text" id="inputField" name="product_name"
-                            placeholder="Nhập để tìm kiếm sản phẩm"
-                            value="<?php echo isset($_GET['name']) ? $_GET['name'] : ''; ?>">
-                        <div class="header__search-btn">
-                            <button type="submit" class="header__search-btn-icon fa-solid fa-magnifying-glass"></button>
-                        </div>
-                    </form>
+                            <input class="header__search-input" type="text" id="inputField" name="product_name"
+                                placeholder="Nhập để tìm kiếm sản phẩm"
+                                value="<?php echo isset($_GET['name']) ? $_GET['name'] : ''; ?>">
+                            <div class="header__search-btn">
+                                <button type="submit"
+                                    class="header__search-btn-icon fa-solid fa-magnifying-glass"></button>
+                            </div>
+                        </form>
 
                         <div class="header__cart">
                             <a href="./cart.php"><i class="header__cart-icon fa-solid fa-cart-shopping"></i></a>
@@ -242,7 +243,7 @@ $orderStatusTerms = [
                 </div>
             </div>
 
-            <?php include_once ('layout/footer.php'); ?>
+            <?php include_once('layout/footer.php'); ?>
         </div>
         <!-- <script src="main.js"></script> -->
 </body>

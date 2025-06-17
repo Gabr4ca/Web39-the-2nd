@@ -7,8 +7,8 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-include_once ('layout/head.php');
-include_once ('../connection.php');
+include_once('layout/head.php');
+include_once('../connection.php');
 
 $username = $_SESSION['username'];
 
@@ -32,7 +32,7 @@ $stmt->fetch();
 <html lang="en">
 
 <head>
-    <?php include_once ('layout/head.php'); ?>
+    <?php include_once('layout/head.php'); ?>
     <link rel="stylesheet" href="admin.php">
     <link rel="stylesheet" href="usercss.php">
 </head>
@@ -174,7 +174,7 @@ $stmt->fetch();
             </div>
         </div>
 
-        <?php include_once ('layout/footer.php'); ?>
+        <?php include_once('layout/footer.php'); ?>
     </div>
 
 </body>

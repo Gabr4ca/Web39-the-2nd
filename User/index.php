@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-include_once ('layout/head.php');
-include_once ('../connection.php');
-include_once ('search.php');
+include_once('layout/head.php');
+include_once('../connection.php');
+include_once('search.php');
 // Determine which page to display
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $productsPerPage = 5;
@@ -39,7 +39,7 @@ if ($ketqua) {
     echo "Error executing query: " . mysqli_error($mysqli);
 }
 
-include_once ('advanced.php');
+include_once('advanced.php');
 
 
 
@@ -48,7 +48,7 @@ include_once ('advanced.php');
 <html lang="en">
 
 <head>
-    <?php include_once ('layout/head.php'); ?>
+    <?php include_once('layout/head.php'); ?>
 </head>
 
 <body>
@@ -96,10 +96,10 @@ include_once ('advanced.php');
             <div class="grid">
                 <div class="grid__row app__content">
                     <div class="grid__column-2">
-                        
+
                     </div>
                     <div class="grid__column-10">
-                    <form action="user.php" method="get">
+                        <form action="user.php" method="get">
                             <div class="home-filter">
                                 <span class="home-filter__label"></span>
                                 <label class="home-filter__label" for="product_name">Tìm nâng cao </label>
@@ -137,18 +137,18 @@ include_once ('advanced.php');
                                     <div class="home-filter__page-control">
                                         <?php if ($page > 1): ?>
                                             <a href="user.php?page=<?php echo ($page - 1);
-                                                if (!empty($product_name)) {
-                                                    echo "&product_name=" . $_GET['product_name'];
-                                                }
-                                                if (isset($_GET['category'])) {
-                                                    echo "&category=" . $_GET['category'];
-                                                }
-                                                if (isset($_GET['min_price'])) {
-                                                    echo "&min_price=" . $_GET['min_price'];
-                                                }
-                                                if (isset($_GET['max_price'])) {
-                                                    echo "&max_price=" . $_GET['max_price'];
-                                                }
+                                            if (!empty($product_name)) {
+                                                echo "&product_name=" . $_GET['product_name'];
+                                            }
+                                            if (isset($_GET['category'])) {
+                                                echo "&category=" . $_GET['category'];
+                                            }
+                                            if (isset($_GET['min_price'])) {
+                                                echo "&min_price=" . $_GET['min_price'];
+                                            }
+                                            if (isset($_GET['max_price'])) {
+                                                echo "&max_price=" . $_GET['max_price'];
+                                            }
                                             ?>" class="home-filter__page-btn">
                                                 <i class="home-filter__page-icon fa-solid fa-angle-left"></i>
                                             </a>
@@ -156,18 +156,18 @@ include_once ('advanced.php');
 
                                         <?php if ($page < $totalPages): ?>
                                             <a href="user.php?page=<?php echo ($page + 1);
-                                                if (!empty($product_name)) {
-                                                    echo "&product_name=" . $_GET['product_name'];
-                                                }
-                                                if (isset($_GET['category'])) {
-                                                    echo "&category=" . $_GET['category'];
-                                                }
-                                                if (isset($_GET['min_price'])) {
-                                                    echo "&min_price=" . $_GET['min_price'];
-                                                }
-                                                if (isset($_GET['max_price'])) {
-                                                    echo "&max_price=" . $_GET['max_price'];
-                                                }
+                                            if (!empty($product_name)) {
+                                                echo "&product_name=" . $_GET['product_name'];
+                                            }
+                                            if (isset($_GET['category'])) {
+                                                echo "&category=" . $_GET['category'];
+                                            }
+                                            if (isset($_GET['min_price'])) {
+                                                echo "&min_price=" . $_GET['min_price'];
+                                            }
+                                            if (isset($_GET['max_price'])) {
+                                                echo "&max_price=" . $_GET['max_price'];
+                                            }
                                             ?>" class="home-filter__page-btn">
                                                 <i class="home-filter__page-icon fa-solid fa-angle-right"></i>
                                             </a>

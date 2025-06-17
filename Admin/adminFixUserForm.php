@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 session_start();
-include_once ('../connection.php');
+include_once('../connection.php');
 
 $username = $_SESSION['username'];
 if (!isset($_SESSION['username'])) {
@@ -28,7 +28,7 @@ if (isset($id)) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
-    $name = $_POST['name']; 
+    $name = $_POST['name'];
     $address = $_POST['address'];
     $phone = $_POST['phone'];
     $email = $_POST['email'];

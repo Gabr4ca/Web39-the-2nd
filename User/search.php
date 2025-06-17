@@ -1,6 +1,6 @@
 <?php
 if (isset($_GET['search'])) {
-   
+
 } else {
     $sql = "SELECT * FROM sanpham
         LEFT JOIN phanloai ON sanpham.category_id = phanloai.category_id";

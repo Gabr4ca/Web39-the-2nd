@@ -9,8 +9,8 @@ if (!isset($_SESSION['username'])) {
     header("Location: ../User/Sign-in.php");
     exit();
 }
-include_once ('../User/layout/head.php');
-include_once ('../connection.php');
+include_once('../User/layout/head.php');
+include_once('../connection.php');
 
 $order_id = $_GET['order_id'];
 
@@ -130,7 +130,8 @@ $orders = $result->fetch_all(MYSQLI_ASSOC);
                     </div>
                     <div class="order__info-user">
                         <table class="order__table-info">
-                            <?php foreach ($orders as $order): ?>
+                            <?php if (!empty($orders)):
+                                $order = $orders[0]; ?>
                                 <tr>
                                     <td class="title-info">
                                         Họ Tên
@@ -167,8 +168,7 @@ $orders = $result->fetch_all(MYSQLI_ASSOC);
                                     </td>
                                     <td class="detailed-info">04-03-2024</td>
                                 </tr>
-                                <?php break; ?>
-                            <?php endforeach; ?>
+                            <?php endif; ?>
                         </table>
                     </div>
 
